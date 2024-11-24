@@ -1,0 +1,161 @@
+/*Page Styling*/
+body{
+    background-color:cadetblue;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+nav {
+    background-color: #333; 
+    padding: 10px 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    
+}
+
+nav ul {
+    list-style: none; 
+    display: flex; 
+    justify-content: center; 
+    margin: 0; 
+    padding: 0; 
+}
+
+nav ul li {
+    margin: 0 15px; 
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: white;
+    font-size: 18px; 
+    font-weight: bold; 
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+nav ul li a:hover {
+    color: #00bcd4; 
+    transform: scale(1.1); 
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    nav ul li {
+        margin: 10px 0; 
+    }
+
+    footer{
+        text-align: center;
+        padding: 0;
+    }
+}
+
+.header{
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.info{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+footer{
+    text-align: right;
+    background-color: #666;
+    font-size: 20px;
+    padding: 1px;
+}
+
+footer p {
+    color: white; 
+    font-weight: bold; 
+    margin: 5px; 
+    padding-right: 25px;
+    font-style: italic; 
+}
+
+#prognostic{
+    display: none;
+}
+
+#variable{
+    display: none;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+}
+
+.maximg{
+    max-width: 70%;
+}
+
+.minimg{
+    width: 70%;
+}
+
+/*Table Styling*/
+.info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    table-layout: fixed; 
+}
+  
+.info th, .info td {
+    word-wrap: break-word; 
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.info th {
+    background-color: #444;
+    color: #ffffff;
+    font-weight: bold;
+}
+  
+.info td {
+    background-color:darkgrey;
+}
+
+.info select {
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color:blanchedalmond;
+}
+
+.info th:hover, .info td:hover {
+    background-color:cadetblue;
+}
+  
+.info select:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    .info table {
+      display: block;
+      overflow-x: auto;
+    }
+  
+    .info th, .info td {
+      display: block;
+      width: 100%; 
+      border: none;
+      text-align: left;
+    }
+}

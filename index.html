@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Florida Weather Page provides real-time weather forecasts, insights, and updates tailored to Florida's dynamic climate. Stay prepared and informed.">
+    <title>My Florida Weather Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!--Header and Menu-->
+    <header class="header">My Florida Weather Page</header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Home <img src="images/home2.png" alt="Home" class="icon"></a></li>
+            <li><a href="#" onclick="showPage('variable')">Weather Variables <img src="images/cloud.png" alt="Weather Variables" class="icon"></a></li>
+            <li><a href="#" onclick="showPage('prognostic')">Weather Report <img src="images/report.png" alt="Weather Prognostic" class="icon"></a></li>
+        </ul>
+    </nav>
+    
+    <!--Home Page-->
+    <section class="info" id="home">
+        <h1>Florida Weather</h1>
+        <p>Welcome to <i>My Florida Weather Page</i>, your trusted source for accurate and up-to-date weather forecasts 
+           across the Sunshine State. From sunny skies and balmy breezes to the occasional tropical storm, 
+           Florida’s climate is as dynamic as its diverse landscapes. Whether you're planning a beach day, 
+           navigating  through the rainy season, or staying prepared during hurricane season, we've got you 
+           covered with real-time weather information. Explore our site for detailed forecasts and insights 
+           tailored to Florida's unique weather patterns.</p>
+        <img src="images/wallpaperflare.com_wallpaper.jpg" class="maximg" alt="A scenic Florida beach with sunny weather">
+        
+        <h1>The Importance of Knowing the Weather</h1>
+        <p>Understanding the weather in Florida is essential due to the state's unique and often 
+           unpredictable climate. Known for its sunny days and tropical charm, Florida also experiences 
+           sudden thunderstorms, high humidity, and a hurricane season that demands vigilance. For residents 
+           and visitors alike, staying informed about the weather ensures safety and helps plan daily 
+           activities, from beach outings and fishing trips to outdoor events. Accurate weather knowledge 
+           is crucial during hurricane season, enabling timely preparation and evacuation if necessary. 
+           Whether it's avoiding dangerous lightning storms or dressing appropriately for fluctuating 
+           temperatures, being aware of Florida's weather patterns is key to enjoying all that the state has 
+           to offer while staying safe.</p>
+        <img src="images/rain.jpg" class="minimg" alt="A man running through heavy rain">
+    </section>
+
+    <!--Variable Info Page-->
+    <section class="info" id="variable">
+        <h1>List with weather variables and it's effects:</h1>
+        <h2>Temperature</h2>
+        <p>The temperature variable displays the minimum and maximum temperatures for the selected day.</p>
+        <img src="images/temp.avif" alt="Thermometer" class="minimg">
+
+        <h2>Maximum Precipitation Probability</h2>
+        <p>The Maximum Precipitation Probability variable indicates the highest likelihood of rain (in %) 
+           for the selected day.</p>
+        <img src="images/heavyrain.jpg" alt="A stormy sky with heavy rain" class="maximg">
+
+        <h2>Maximun wind Speed</h2>
+        <p>The Maximum Wind Speed variable shows the highest recorded wind speed for the selected day.</p>
+        <img src="images/wind.jpg" alt="Strong wind hitting the trees" class="minimg">
+    </section>
+    
+    <!--Weather Reort Page-->
+    <section class="info" id="prognostic">
+        <h1>Weather Report</h1>
+        <table>
+            <tr>
+                <th>Miami</th>
+                <th>Orlando</th>
+                <th>Tallahassee</th>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <label for="select-date">Choose a date:</label><br>
+                        <select id="mia-select-date" onchange="GetWeather('mia')" aria-label="Select a date for Miami">
+                            <option value="10">Select a Date</option>
+                        </select>
+                    </div>   
+                    <div >
+
+                    </div>              
+                </td>   
+                <td>
+                    <div>
+                        <label for="select-date">Choose a date:</label><br>
+                        <select id="orl-select-date" onchange="GetWeather('orl')" aria-label="Select a date for Miami">
+                            <option value="10">Select a Date</option>
+                        </select>
+                    </div>                 
+                </td> 
+                <td>
+                    <div>
+                        <label for="select-date">Choose a date:</label><br>
+                        <select id="tal-select-date" onchange="GetWeather('tal')" aria-label="Select a date for Miami">
+                            <option value="10">Select a Date</option>
+                        </select>
+                    </div>                 
+                </td>           
+                
+            </tr>
+        </table>
+        <div id="selectedInfo">        
+        </div>
+    </section>
+
+    
+    <br>
+    <footer>        
+        <p> By Luis Rodrigues </p>
+    </footer>    
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
